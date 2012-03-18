@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2E21199151632850064C4DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E21198151632850064C4DD /* main.cpp */; };
+		A2E2119B151632850064C4DD /* ExpressionStack.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2E2119A151632850064C4DD /* ExpressionStack.1 */; };
+		A2E211BF151648B70064C4DD /* addExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B4151648B40064C4DD /* addExpression.cpp */; };
+		A2E211C0151648B70064C4DD /* divideExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B5151648B40064C4DD /* divideExpression.cpp */; };
+		A2E211C1151648B70064C4DD /* lnExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B6151648B50064C4DD /* lnExpression.cpp */; };
+		A2E211C2151648B70064C4DD /* logExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B7151648B50064C4DD /* logExpression.cpp */; };
+		A2E211C3151648B70064C4DD /* modExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B8151648B50064C4DD /* modExpression.cpp */; };
+		A2E211C4151648B70064C4DD /* multiplyExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B9151648B60064C4DD /* multiplyExpression.cpp */; };
+		A2E211C5151648B70064C4DD /* numberExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211BA151648B60064C4DD /* numberExpression.cpp */; };
+		A2E211C6151648B70064C4DD /* powExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211BB151648B60064C4DD /* powExpression.cpp */; };
+		A2E211C7151648B70064C4DD /* subtractExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211BC151648B70064C4DD /* subtractExpression.cpp */; };
+		A2E211C8151648B70064C4DD /* trigExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211BD151648B70064C4DD /* trigExpression.cpp */; };
+		A2E211C9151648B70064C4DD /* variableExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211BE151648B70064C4DD /* variableExpression.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2E21192151632850064C4DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				A2E2119B151632850064C4DD /* ExpressionStack.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A2E21194151632850064C4DD /* ExpressionStack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExpressionStack; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E21198151632850064C4DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A2E2119A151632850064C4DD /* ExpressionStack.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ExpressionStack.1; sourceTree = "<group>"; };
+		A2E211A7151632E30064C4DD /* addExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addExpression.h; path = expression/addExpression.h; sourceTree = "<group>"; };
+		A2E211A8151632E30064C4DD /* baseExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseExpression.h; path = expression/baseExpression.h; sourceTree = "<group>"; };
+		A2E211A9151632E30064C4DD /* divideExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = divideExpression.h; path = expression/divideExpression.h; sourceTree = "<group>"; };
+		A2E211AA151632E30064C4DD /* expressions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = expressions.h; path = expression/expressions.h; sourceTree = "<group>"; };
+		A2E211AB151632E30064C4DD /* lnExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lnExpression.h; path = expression/lnExpression.h; sourceTree = "<group>"; };
+		A2E211AC151632E30064C4DD /* logExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logExpression.h; path = expression/logExpression.h; sourceTree = "<group>"; };
+		A2E211AD151632E30064C4DD /* modExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = modExpression.h; path = expression/modExpression.h; sourceTree = "<group>"; };
+		A2E211AE151632E30064C4DD /* multiplyExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = multiplyExpression.h; path = expression/multiplyExpression.h; sourceTree = "<group>"; };
+		A2E211AF151632E30064C4DD /* numberExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = numberExpression.h; path = expression/numberExpression.h; sourceTree = "<group>"; };
+		A2E211B0151632E30064C4DD /* powExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = powExpression.h; path = expression/powExpression.h; sourceTree = "<group>"; };
+		A2E211B1151632E30064C4DD /* subtractExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subtractExpression.h; path = expression/subtractExpression.h; sourceTree = "<group>"; };
+		A2E211B2151632E30064C4DD /* trigExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trigExpression.h; path = expression/trigExpression.h; sourceTree = "<group>"; };
+		A2E211B3151632E30064C4DD /* variableExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = variableExpression.h; path = expression/variableExpression.h; sourceTree = "<group>"; };
+		A2E211B4151648B40064C4DD /* addExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = addExpression.cpp; path = expression/addExpression.cpp; sourceTree = "<group>"; };
+		A2E211B5151648B40064C4DD /* divideExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = divideExpression.cpp; path = expression/divideExpression.cpp; sourceTree = "<group>"; };
+		A2E211B6151648B50064C4DD /* lnExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lnExpression.cpp; path = expression/lnExpression.cpp; sourceTree = "<group>"; };
+		A2E211B7151648B50064C4DD /* logExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logExpression.cpp; path = expression/logExpression.cpp; sourceTree = "<group>"; };
+		A2E211B8151648B50064C4DD /* modExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modExpression.cpp; path = expression/modExpression.cpp; sourceTree = "<group>"; };
+		A2E211B9151648B60064C4DD /* multiplyExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = multiplyExpression.cpp; path = expression/multiplyExpression.cpp; sourceTree = "<group>"; };
+		A2E211BA151648B60064C4DD /* numberExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = numberExpression.cpp; path = expression/numberExpression.cpp; sourceTree = "<group>"; };
+		A2E211BB151648B60064C4DD /* powExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = powExpression.cpp; path = expression/powExpression.cpp; sourceTree = "<group>"; };
+		A2E211BC151648B70064C4DD /* subtractExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = subtractExpression.cpp; path = expression/subtractExpression.cpp; sourceTree = "<group>"; };
+		A2E211BD151648B70064C4DD /* trigExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = trigExpression.cpp; path = expression/trigExpression.cpp; sourceTree = "<group>"; };
+		A2E211BE151648B70064C4DD /* variableExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = variableExpression.cpp; path = expression/variableExpression.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2E21191151632850064C4DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2E21189151632850064C4DD = {
+			isa = PBXGroup;
+			children = (
+				A2E21197151632850064C4DD /* ExpressionStack */,
+				A2E21195151632850064C4DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2E21195151632850064C4DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2E21194151632850064C4DD /* ExpressionStack */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2E21197151632850064C4DD /* ExpressionStack */ = {
+			isa = PBXGroup;
+			children = (
+				A2E211A5151632D20064C4DD /* expression */,
+				A2E21198151632850064C4DD /* main.cpp */,
+				A2E2119A151632850064C4DD /* ExpressionStack.1 */,
+			);
+			path = ExpressionStack;
+			sourceTree = "<group>";
+		};
+		A2E211A5151632D20064C4DD /* expression */ = {
+			isa = PBXGroup;
+			children = (
+				A2E211B4151648B40064C4DD /* addExpression.cpp */,
+				A2E211B5151648B40064C4DD /* divideExpression.cpp */,
+				A2E211B6151648B50064C4DD /* lnExpression.cpp */,
+				A2E211B7151648B50064C4DD /* logExpression.cpp */,
+				A2E211B8151648B50064C4DD /* modExpression.cpp */,
+				A2E211B9151648B60064C4DD /* multiplyExpression.cpp */,
+				A2E211BA151648B60064C4DD /* numberExpression.cpp */,
+				A2E211BB151648B60064C4DD /* powExpression.cpp */,
+				A2E211BC151648B70064C4DD /* subtractExpression.cpp */,
+				A2E211BD151648B70064C4DD /* trigExpression.cpp */,
+				A2E211BE151648B70064C4DD /* variableExpression.cpp */,
+				A2E211A7151632E30064C4DD /* addExpression.h */,
+				A2E211A8151632E30064C4DD /* baseExpression.h */,
+				A2E211A9151632E30064C4DD /* divideExpression.h */,
+				A2E211AA151632E30064C4DD /* expressions.h */,
+				A2E211AB151632E30064C4DD /* lnExpression.h */,
+				A2E211AC151632E30064C4DD /* logExpression.h */,
+				A2E211AD151632E30064C4DD /* modExpression.h */,
+				A2E211AE151632E30064C4DD /* multiplyExpression.h */,
+				A2E211AF151632E30064C4DD /* numberExpression.h */,
+				A2E211B0151632E30064C4DD /* powExpression.h */,
+				A2E211B1151632E30064C4DD /* subtractExpression.h */,
+				A2E211B2151632E30064C4DD /* trigExpression.h */,
+				A2E211B3151632E30064C4DD /* variableExpression.h */,
+			);
+			name = expression;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2E21193151632850064C4DD /* ExpressionStack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2E2119E151632850064C4DD /* Build configuration list for PBXNativeTarget "ExpressionStack" */;
+			buildPhases = (
+				A2E21190151632850064C4DD /* Sources */,
+				A2E21191151632850064C4DD /* Frameworks */,
+				A2E21192151632850064C4DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpressionStack;
+			productName = ExpressionStack;
+			productReference = A2E21194151632850064C4DD /* ExpressionStack */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2E2118B151632850064C4DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A2E2118E151632850064C4DD /* Build configuration list for PBXProject "ExpressionStack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A2E21189151632850064C4DD;
+			productRefGroup = A2E21195151632850064C4DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2E21193151632850064C4DD /* ExpressionStack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2E21190151632850064C4DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E21199151632850064C4DD /* main.cpp in Sources */,
+				A2E211BF151648B70064C4DD /* addExpression.cpp in Sources */,
+				A2E211C0151648B70064C4DD /* divideExpression.cpp in Sources */,
+				A2E211C1151648B70064C4DD /* lnExpression.cpp in Sources */,
+				A2E211C2151648B70064C4DD /* logExpression.cpp in Sources */,
+				A2E211C3151648B70064C4DD /* modExpression.cpp in Sources */,
+				A2E211C4151648B70064C4DD /* multiplyExpression.cpp in Sources */,
+				A2E211C5151648B70064C4DD /* numberExpression.cpp in Sources */,
+				A2E211C6151648B70064C4DD /* powExpression.cpp in Sources */,
+				A2E211C7151648B70064C4DD /* subtractExpression.cpp in Sources */,
+				A2E211C8151648B70064C4DD /* trigExpression.cpp in Sources */,
+				A2E211C9151648B70064C4DD /* variableExpression.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A2E2119C151632850064C4DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A2E2119D151632850064C4DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A2E2119F151632850064C4DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2E211A0151632850064C4DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2E2118E151632850064C4DD /* Build configuration list for PBXProject "ExpressionStack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E2119C151632850064C4DD /* Debug */,
+				A2E2119D151632850064C4DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2E2119E151632850064C4DD /* Build configuration list for PBXNativeTarget "ExpressionStack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E2119F151632850064C4DD /* Debug */,
+				A2E211A0151632850064C4DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2E2118B151632850064C4DD /* Project object */;
+}
