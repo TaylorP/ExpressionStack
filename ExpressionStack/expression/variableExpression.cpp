@@ -51,4 +51,11 @@ BaseExpression* VariableExpression::derivative(VariableExpression* pVariable)
         return new NumberExpression(0.0);
     }
 }
+
+
+///Cleans and minimizes the expression
+BaseExpression* VariableExpression::clean()
+{
+    return this;
+}
     

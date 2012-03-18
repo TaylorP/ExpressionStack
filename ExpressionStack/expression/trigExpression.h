@@ -14,9 +14,17 @@ enum OperatorType
     eCos,
     eTan,
     
+    eCsc,
+    eSec,
+    eCot,
+    
     eASin,
     eACos,
     eATan,
+
+    eACsc,
+    eASec,
+    eACot,
     
     eSinH,
     eCosH,
@@ -50,6 +58,12 @@ public:
       
     ///Returns a string representation of this expression
     virtual std::string toString();
+    
+    ///Returns a new expression containing the derivative of this expression
+    virtual BaseExpression* derivative(VariableExpression* pVariable);  
+    
+    ///Cleans and minimizes the expression
+    virtual BaseExpression* clean();    
 };
 
 #endif

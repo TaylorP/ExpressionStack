@@ -33,6 +33,9 @@ public:
     ///Returns a new expression containing the derivative of this expression
     virtual BaseExpression* derivative(VariableExpression* pVariable);
     
+    ///Cleans and minimizes the expression
+    virtual BaseExpression* clean();    
+    
 };
 
 //Global X and Y variables, since we only really need one instance of each

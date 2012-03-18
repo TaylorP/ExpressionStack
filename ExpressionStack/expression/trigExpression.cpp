@@ -53,6 +53,19 @@ float TrigExpression::evaluate(float pX, float pY)
             lVal = atan(lLeft);
             break;
             
+            
+        case eCsc:
+            lVal = 1.0/sin(lLeft);
+            break;
+            
+        case eSec: 
+            lVal = 1.0/cos(lLeft);
+            break;
+            
+        case eCot:
+            lVal = 1.0/tan(lLeft);
+            break;      
+            
         default:
             break;
             
@@ -93,6 +106,18 @@ std::string TrigExpression::toString()
             lStrRep = "atan(";
             break;
             
+        case eCsc:
+            lStrRep = "csc(";
+            break;
+            
+        case eSec: 
+            lStrRep = "sec(";
+            break;
+            
+        case eCot:
+            lStrRep = "cot(";
+            break;       
+            
         default:
             break;
             
@@ -102,4 +127,38 @@ std::string TrigExpression::toString()
     lStrRep += ")";
     
     return lStrRep;
+}
+
+///Returns a new expression containing the derivative of this expression
+BaseExpression* TrigExpression::derivative(VariableExpression *pVariable)
+{
+    BaseExpression* lTrigPart;
+    switch(mTrigFunction)
+    {
+        case eSin:
+            lTrigPart = new TrigExpression(mLeft, eCos);
+            break;
+            
+        case eCos:
+            lTrigPart = new MultiplyExpression( new NumberExpression(-1.0), new TrigExpression(mLeft, eSin));
+            break;
+            
+        case eTan:
+           lTrigPart = new PowerExpression(new TrigExpression(mLeft, eSec), new NumberExpression(2.0));
+            break;
+            
+        default:
+            return 0;
+            break;
+            
+    }
+    
+    return new MultiplyExpression(lTrigPart, mLeft->derivative(pVariable));
+}
+
+
+///Cleans and minimizes the expression
+BaseExpression* TrigExpression::clean()
+{
+    return new TrigExpression(mLeft->clean(), mTrigFunction);
 }

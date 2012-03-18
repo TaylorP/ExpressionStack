@@ -61,4 +61,22 @@ BaseExpression* MultiplyExpression::derivative(VariableExpression* pVariable)
     BaseExpression* lRight = new MultiplyExpression(mLeft, mRight->derivative(pVariable));
     
     return new AddExpression(lLeft, lRight);
-}      
+}     
+
+///Cleans and minimizes the expression
+BaseExpression* MultiplyExpression::clean()
+{
+    NumberExpression* lNumPartR = dynamic_cast<NumberExpression*>(mRight->clean());
+    NumberExpression* lNumPartL = dynamic_cast<NumberExpression*>(mLeft->clean());
+    
+    if((lNumPartR && lNumPartR->isZero()) || (lNumPartL && lNumPartL->isZero()))
+        return new NumberExpression(0.0f);
+    
+    if(lNumPartR && lNumPartR->isOne())
+        return mLeft->clean();
+    
+    if(lNumPartL && lNumPartL->isOne())
+        return mRight->clean();   
+    
+    return new MultiplyExpression(mLeft->clean(), mRight->clean());
+}

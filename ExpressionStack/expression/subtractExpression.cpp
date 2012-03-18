@@ -44,3 +44,19 @@ BaseExpression* SubtractExpression::derivative(VariableExpression* pVariable)
 {
     return new SubtractExpression(mLeft->derivative(pVariable), mRight->derivative(pVariable));
 } 
+
+
+///Cleans and minimizes the expression
+BaseExpression* SubtractExpression::clean()
+{
+    NumberExpression* lNumPart = dynamic_cast<NumberExpression*>(mRight->clean());
+    
+    if(lNumPart && lNumPart->isZero())
+        return mLeft->clean();
+    
+    lNumPart = dynamic_cast<NumberExpression*>(mLeft->clean());
+    if(lNumPart && lNumPart->isZero())
+        return mRight->clean();
+    
+    return new AddExpression(mLeft->clean(), mRight->clean());
+}

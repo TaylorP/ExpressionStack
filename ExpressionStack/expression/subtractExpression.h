@@ -29,6 +29,9 @@ public:
     ///Returns a new expression containing the derivative of this expression
     virtual BaseExpression* derivative(VariableExpression* pVariable);
     
+    ///Cleans and minimizes the expression
+    virtual BaseExpression* clean();    
+    
 };
 
 #endif

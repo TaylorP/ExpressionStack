@@ -44,3 +44,11 @@ BaseExpression* ModExpression::derivative(VariableExpression* pVariable)
 {
     return 0;
 }  
+
+///Cleans and minimizes the expression
+BaseExpression* ModExpression::clean()
+{
+    //FIX ME
+    
+    return new ModExpression(mLeft->clean(), mRight->clean());
+}

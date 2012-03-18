@@ -66,6 +66,9 @@ public:
     
     ///Returns a new expression containing the derivative of this expression
     virtual BaseExpression* derivative(VariableExpression* pVariable) = 0;
+    
+    ///Cleans and minimizes the expression
+    virtual BaseExpression* clean() = 0;
 };
 
 #endif

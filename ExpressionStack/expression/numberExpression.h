@@ -27,12 +27,21 @@ public:
 
     ///Returns the numeric value of this expression
     inline virtual float evaluate(float pX, float pY);
+    
+    ///Returns true if this number is zero.
+    inline virtual bool isZero();
+    
+    ///Returns true if this number is one.
+    inline virtual bool isOne();   
 
     ///Returns a string represenation of the expression
     virtual std::string toString();
     
     ///Returns a new expression containing the derivative of this expression
     virtual BaseExpression* derivative(VariableExpression* pVariable); 
+    
+    ///Cleans and minimizes the expression
+    virtual BaseExpression* clean();    
 };
 
 #endif

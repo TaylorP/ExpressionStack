@@ -45,3 +45,15 @@ BaseExpression* LnExpression::derivative(VariableExpression* pVariable)
     
     return new MultiplyExpression(lDivisionPart, mLeft->derivative(pVariable));
 }    
+
+///Cleans and minimizes the expression
+BaseExpression* LnExpression::clean()
+{
+    NumberExpression* lNumPart = dynamic_cast<NumberExpression*>(mLeft->clean());
+    
+    if(lNumPart && lNumPart->isOne())
+        return new NumberExpression(0.0f);
+    
+    return new LnExpression(mLeft->clean(), 0);
+}
+

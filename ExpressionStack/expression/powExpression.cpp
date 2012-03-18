@@ -43,7 +43,6 @@ std::string PowerExpression::toString()
 BaseExpression* PowerExpression::derivative(VariableExpression* pVariable)
 {
     NumberExpression* lNumPart = dynamic_cast<NumberExpression*>(mRight);
-    
     if(lNumPart)
     {
         BaseExpression* lOutside = new MultiplyExpression(mRight, new PowerExpression(mLeft, new SubtractExpression(mRight, new NumberExpression(1.0))));
@@ -51,9 +50,34 @@ BaseExpression* PowerExpression::derivative(VariableExpression* pVariable)
         return new MultiplyExpression(lOutside, mLeft->derivative(pVariable));
     }
     
-    /* lNumPart = dynamic_cast<NumberExpression*>(mLeft);
+     lNumPart = dynamic_cast<NumberExpression*>(mLeft);
      if(lNumPart)
      {
-     return new MultiplyExpression(new MultiplyExpression(this, new LnExpression(mLeft,0)),mRight->derivative(pVariable));
-     }*/
+         return new MultiplyExpression(new MultiplyExpression(this, new LnExpression(mLeft,0)),mRight->derivative(pVariable));
+     }
+    
+    //FIX ME: Extra cases for x^x or whatnot
+    return 0;
 }  
+
+///Cleans and minimizes the expression
+BaseExpression* PowerExpression::clean()
+{
+    NumberExpression* lNumPart = dynamic_cast<NumberExpression*>(mRight);
+    
+    if(lNumPart && lNumPart->isZero())
+        return new NumberExpression(1.0);
+    
+    if(lNumPart && lNumPart->isOne())
+        return mLeft->clean();
+    
+    lNumPart = dynamic_cast<NumberExpression*>(mLeft);
+    
+    if(lNumPart && lNumPart->isZero())
+        return new NumberExpression(0.0);
+    
+    if(lNumPart && lNumPart->isOne())
+        return new NumberExpression(1.0); 
+    
+    return new PowerExpression(mLeft->clean(), mRight->clean());
+}

@@ -46,3 +46,19 @@ BaseExpression* DivideExpression::derivative(VariableExpression* pVariable)
     return new DivideExpression(
                                 new SubtractExpression(new MultiplyExpression(mLeft->derivative(pVariable),mRight), new MultiplyExpression(mLeft,mRight->derivative(pVariable))), new PowerExpression(mRight, new NumberExpression(2.0)));
 }   
+
+
+///Cleans and minimizes the expression
+BaseExpression* DivideExpression::clean()
+{
+    NumberExpression* lNumPart = dynamic_cast<NumberExpression*>(mRight->clean());
+    
+    if(lNumPart && lNumPart->isOne())
+        return mLeft->clean();
+    
+    lNumPart = dynamic_cast<NumberExpression*>(mLeft->clean());
+    if(lNumPart && lNumPart->isZero())
+        return new NumberExpression(0.0);
+    
+    return new DivideExpression(mLeft->clean(), mRight->clean());
+}
