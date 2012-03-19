@@ -24,7 +24,7 @@ public:
     ~DivideExpression();
 
     ///Evaluates the expression at pX,pY, and returns infinity when dividing by 0
-    inline virtual float evaluate(float pX, float pY);
+    inline virtual F32 evaluate(F32 pX, F32 pY);
     
     ///Returns a string represenation of the expression
     virtual std::string toString();

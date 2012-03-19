@@ -20,9 +20,9 @@ DivideExpression::~DivideExpression()
 }
 
 ///Evaluates the expression at pX,pY, and returns infinity when dividing by 0
-float DivideExpression::evaluate(float pX, float pY)
+F32 DivideExpression::evaluate(F32 pX, F32 pY)
 {
-    float lRight = mRight->evaluate(pX, pY);
+    F32 lRight = mRight->evaluate(pX, pY);
     
     if(lRight == 0)
         return INFINITY;

@@ -20,7 +20,7 @@ PowerExpression::~PowerExpression()
 }
 
 ///Evaluates this expression, i.e compute mLeft^mRight
-float PowerExpression::evaluate(float pX, float pY)
+F32 PowerExpression::evaluate(F32 pX, F32 pY)
 {
     return pow(mLeft->evaluate(pX, pY),mRight->evaluate(pX, pY));
 }

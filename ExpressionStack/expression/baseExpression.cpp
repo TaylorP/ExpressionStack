@@ -35,3 +35,26 @@ void BaseExpression::printExpression()
 {
     printf("%s",toString().c_str());
 }    
+
+///Evaluates the expression at the Point2F coordinate
+F32 BaseExpression::evaluate(Point2F& pPoint)
+{
+    return evaluate(pPoint.x, pPoint.y);
+}
+
+///Evaluates the gradient at the point pX, pY
+Vector2F BaseExpression::gradient(F32 pX, F32 pY)
+{
+    return Vector2F(
+                    this->derivative(XVAR)->evaluate(pX, pY), 
+                    this->derivative(YVAR)->evaluate(pX, pY)
+                    );
+}
+
+///Evaluates the gradient at the Point2F coordinate
+Vector2F BaseExpression::gradient(Point2F& pPoint)
+{
+    return Vector2F(
+                    this->derivative(XVAR)->evaluate(pPoint), 
+                    this->derivative(YVAR)->evaluate(pPoint));
+}

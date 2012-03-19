@@ -17,7 +17,7 @@ VariableExpression::~VariableExpression()
 }
 
 //Evaluates this variable expressions
-float VariableExpression::evaluate(float pX, float pY)
+F32 VariableExpression::evaluate(F32 pX, F32 pY)
 {
     //Return pX if this is an x variable, or pY if this a y
     if(mVariable)

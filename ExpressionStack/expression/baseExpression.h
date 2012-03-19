@@ -12,6 +12,9 @@
 #include <iostream>
 #include <sstream>
 
+#include "types.h"
+#include "vector2F.h"
+
 class VariableExpression;
 
 ///The base expression class from which all other expression types are derived
@@ -39,18 +42,37 @@ public:
 
     
     ///Evaluates the expression at the point pX, pY
-    inline virtual float evaluate(float pX, float pY) = 0;
+    inline virtual F32 evaluate(F32 pX, F32 pY) = 0;
+    
+    ///Evaluates the expression at the Point2F coordinate
+    inline virtual F32 evaluate(Point2F& pPoint);
+    
+    ///Evaluates the gradient at the point pX, pY
+    inline virtual Vector2F gradient(F32 pX, F32 pY);
+    
+    ///Evaluates the gradient at the Point2F coordinate
+    inline virtual Vector2F gradient(Point2F& pPoint);
+    
+    
+    ///Find the critical points, assuming the function is unbounded
+    //inline virtual Point2F* criticalPoints();
+    
+    ///Find the critical points, assuming the function is bounded by set of expressions in pBounds
+    //inline virtual Point2F* criticalPoints(BaseExpression** pBounds);
 
+    
     ///Prints the expression to the console
     virtual void printExpression();
     
     ///Returns a string representation of the expression
     virtual std::string toString() = 0;
+
+    
     
     ///Returns a new expression containing the derivative of this expression
     virtual BaseExpression* derivative(VariableExpression* pVariable) = 0;
     
-    ///Cleans and minimizes the expression
+    ///Returns a minimized copy of the expression
     virtual BaseExpression* clean() = 0;
 
     

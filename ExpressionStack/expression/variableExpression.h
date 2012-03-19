@@ -25,7 +25,7 @@ public:
     ~VariableExpression();
 
     //Evaluates this variable expressions
-    inline virtual float evaluate(float pX, float pY);
+    inline virtual F32 evaluate(F32 pX, F32 pY);
 
     ///Returns a string represenation of the expression
     virtual std::string toString();

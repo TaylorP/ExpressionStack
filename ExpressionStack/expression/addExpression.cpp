@@ -20,7 +20,7 @@ AddExpression::~AddExpression()
 }
 
 ///Evaluates the expression at the point pX, pY
-float AddExpression::evaluate(float pX, float pY)
+F32 AddExpression::evaluate(F32 pX, F32 pY)
 {
     return mLeft->evaluate(pX, pY) + mRight->evaluate(pX, pY);
 }

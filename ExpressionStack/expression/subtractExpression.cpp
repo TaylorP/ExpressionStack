@@ -20,7 +20,7 @@ SubtractExpression::~SubtractExpression()
 }
 
 ///Evaluates the expression at pX, pY
-float SubtractExpression::evaluate(float pX, float pY)
+F32 SubtractExpression::evaluate(F32 pX, F32 pY)
 {
     return mLeft->evaluate(pX, pY) - mRight->evaluate(pX, pY);
 }

@@ -21,7 +21,7 @@ public:
     ~AddExpression();
 
     ///Evaluates the expression at the point pX, pY
-    virtual float evaluate(float pX, float pY);
+    virtual F32 evaluate(F32 pX, F32 pY);
     
     ///Returns a string represenation of the expression
     virtual std::string toString();

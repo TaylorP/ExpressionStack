@@ -21,10 +21,10 @@ TrigExpression::~TrigExpression()
 }
 
 ///Evaluates the expression at the point pX, pY
-float TrigExpression::evaluate(float pX, float pY)
+F32 TrigExpression::evaluate(F32 pX, F32 pY)
 {
-    float lLeft = mLeft->evaluate(pX,pY);
-    float lVal = 0.0f;
+    F32 lLeft = mLeft->evaluate(pX,pY);
+    F32 lVal = 0.0f;
     
     switch(mTrigFunction)
     {

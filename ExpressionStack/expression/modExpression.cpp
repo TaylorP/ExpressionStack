@@ -20,7 +20,7 @@ ModExpression::~ModExpression()
 }
 
 ///Evaluates the expression at the point pX, pY
-float ModExpression::evaluate(float pX, float pY)
+F32 ModExpression::evaluate(F32 pX, F32 pY)
 {
     return fmod(mLeft->evaluate(pX, pY),mRight->evaluate(pX, pY));
 }

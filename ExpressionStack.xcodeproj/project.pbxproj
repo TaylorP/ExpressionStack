@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A248813B1516B448004FC53A /* baseExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A248813A1516B448004FC53A /* baseExpression.cpp */; };
 		A2E21199151632850064C4DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E21198151632850064C4DD /* main.cpp */; };
-		A2E2119B151632850064C4DD /* ExpressionStack.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2E2119A151632850064C4DD /* ExpressionStack.1 */; };
 		A2E211BF151648B70064C4DD /* addExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B4151648B40064C4DD /* addExpression.cpp */; };
 		A2E211C0151648B70064C4DD /* divideExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B5151648B40064C4DD /* divideExpression.cpp */; };
 		A2E211C1151648B70064C4DD /* lnExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B6151648B50064C4DD /* lnExpression.cpp */; };
@@ -30,7 +29,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				A2E2119B151632850064C4DD /* ExpressionStack.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -38,9 +36,11 @@
 
 /* Begin PBXFileReference section */
 		A248813A1516B448004FC53A /* baseExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = baseExpression.cpp; path = expression/baseExpression.cpp; sourceTree = "<group>"; };
+		A24881431516BA67004FC53A /* point2F.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = point2F.h; path = linalg/point2F.h; sourceTree = "<group>"; };
+		A24881441516BA6D004FC53A /* vector2F.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vector2F.h; path = linalg/vector2F.h; sourceTree = "<group>"; };
+		A24881451516BADF004FC53A /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
 		A2E21194151632850064C4DD /* ExpressionStack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExpressionStack; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E21198151632850064C4DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A2E2119A151632850064C4DD /* ExpressionStack.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ExpressionStack.1; sourceTree = "<group>"; };
 		A2E211A7151632E30064C4DD /* addExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addExpression.h; path = expression/addExpression.h; sourceTree = "<group>"; };
 		A2E211A8151632E30064C4DD /* baseExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseExpression.h; path = expression/baseExpression.h; sourceTree = "<group>"; };
 		A2E211A9151632E30064C4DD /* divideExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = divideExpression.h; path = expression/divideExpression.h; sourceTree = "<group>"; };
@@ -78,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A248813D1516B985004FC53A /* linalg */ = {
+			isa = PBXGroup;
+			children = (
+				A24881441516BA6D004FC53A /* vector2F.h */,
+				A24881431516BA67004FC53A /* point2F.h */,
+			);
+			name = linalg;
+			sourceTree = "<group>";
+		};
 		A2E21189151632850064C4DD = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +106,10 @@
 		A2E21197151632850064C4DD /* ExpressionStack */ = {
 			isa = PBXGroup;
 			children = (
+				A248813D1516B985004FC53A /* linalg */,
 				A2E211A5151632D20064C4DD /* expression */,
 				A2E21198151632850064C4DD /* main.cpp */,
-				A2E2119A151632850064C4DD /* ExpressionStack.1 */,
+				A24881451516BADF004FC53A /* types.h */,
 			);
 			path = ExpressionStack;
 			sourceTree = "<group>";

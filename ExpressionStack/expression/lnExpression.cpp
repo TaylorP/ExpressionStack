@@ -20,7 +20,7 @@ LnExpression::~LnExpression()
 }
 
 ///Evaluates this expression, i.e compute mLeft^mRight
-float LnExpression::evaluate(float pX, float pY)
+F32 LnExpression::evaluate(F32 pX, F32 pY)
 {
     return log(mLeft->evaluate(pX,pY));
 }

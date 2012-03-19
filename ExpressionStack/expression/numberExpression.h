@@ -15,18 +15,18 @@ class NumberExpression : public BaseExpression
 protected:
     
     ///The value of this numeric expression
-    float mValue;
+    F32 mValue;
 
 public:
 
     ///Constructs a new numeric expression from a float value
-    NumberExpression(float pValue);
+    NumberExpression(F32 pValue);
 
     ///Destructs this numeric expression
     ~NumberExpression();
 
     ///Returns the numeric value of this expression
-    inline virtual float evaluate(float pX, float pY);
+    inline virtual F32 evaluate(F32 pX, F32 pY);
     
     ///Returns true if this number is zero.
     inline virtual bool isZero();

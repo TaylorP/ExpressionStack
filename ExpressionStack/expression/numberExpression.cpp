@@ -6,7 +6,7 @@
 #include "expressions.h"
 
 ///Constructs a new numeric expression from a float value
-NumberExpression::NumberExpression(float pValue)
+NumberExpression::NumberExpression(F32 pValue)
 {
     mLeft = 0;
     mRight = 0;
@@ -20,7 +20,7 @@ NumberExpression::~NumberExpression()
 }
 
 ///Returns the numeric value of this expression
-float NumberExpression::evaluate(float pX, float pY)
+F32 NumberExpression::evaluate(F32 pX, F32 pY)
 {
     return mValue;
 }
@@ -56,14 +56,13 @@ std::string NumberExpression::toString()
 ///Returns a new expression containing the derivative of this expression
 BaseExpression* NumberExpression::derivative(VariableExpression* pVariable)
 {
-    return new AddExpression(mLeft->derivative(pVariable), mRight->derivative(pVariable));
+    return new NumberExpression(0.0);
 }   
 
 ///Cleans and minimizes the expression
 BaseExpression* NumberExpression::clean()
 {
     //FIX ME - is this all we need here?
-    
     return new NumberExpression(mValue);
 }
 

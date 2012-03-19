@@ -20,7 +20,7 @@ LogExpression::~LogExpression()
 }
 
 ///Evaluates this expression, i.e compute mLeft^mRight
-float LogExpression::evaluate(float pX, float pY)
+F32 LogExpression::evaluate(F32 pX, F32 pY)
 {
     return log10(mLeft->evaluate(pX,pY));
 }
