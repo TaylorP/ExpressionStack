@@ -78,6 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A201B6661516ECF900DEA7FE /* input */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = input;
+			sourceTree = "<group>";
+		};
 		A248813D1516B985004FC53A /* linalg */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +113,9 @@
 		A2E21197151632850064C4DD /* ExpressionStack */ = {
 			isa = PBXGroup;
 			children = (
-				A248813D1516B985004FC53A /* linalg */,
 				A2E211A5151632D20064C4DD /* expression */,
+				A248813D1516B985004FC53A /* linalg */,
+				A201B6661516ECF900DEA7FE /* input */,
 				A2E21198151632850064C4DD /* main.cpp */,
 				A24881451516BADF004FC53A /* types.h */,
 			);
