@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A248813B1516B448004FC53A /* baseExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A248813A1516B448004FC53A /* baseExpression.cpp */; };
 		A2E21199151632850064C4DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E21198151632850064C4DD /* main.cpp */; };
 		A2E2119B151632850064C4DD /* ExpressionStack.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2E2119A151632850064C4DD /* ExpressionStack.1 */; };
 		A2E211BF151648B70064C4DD /* addExpression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2E211B4151648B40064C4DD /* addExpression.cpp */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A248813A1516B448004FC53A /* baseExpression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = baseExpression.cpp; path = expression/baseExpression.cpp; sourceTree = "<group>"; };
 		A2E21194151632850064C4DD /* ExpressionStack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExpressionStack; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E21198151632850064C4DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A2E2119A151632850064C4DD /* ExpressionStack.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ExpressionStack.1; sourceTree = "<group>"; };
@@ -106,28 +108,29 @@
 			isa = PBXGroup;
 			children = (
 				A2E211B4151648B40064C4DD /* addExpression.cpp */,
-				A2E211B5151648B40064C4DD /* divideExpression.cpp */,
-				A2E211B6151648B50064C4DD /* lnExpression.cpp */,
-				A2E211B7151648B50064C4DD /* logExpression.cpp */,
-				A2E211B8151648B50064C4DD /* modExpression.cpp */,
-				A2E211B9151648B60064C4DD /* multiplyExpression.cpp */,
-				A2E211BA151648B60064C4DD /* numberExpression.cpp */,
-				A2E211BB151648B60064C4DD /* powExpression.cpp */,
-				A2E211BC151648B70064C4DD /* subtractExpression.cpp */,
-				A2E211BD151648B70064C4DD /* trigExpression.cpp */,
-				A2E211BE151648B70064C4DD /* variableExpression.cpp */,
 				A2E211A7151632E30064C4DD /* addExpression.h */,
+				A248813A1516B448004FC53A /* baseExpression.cpp */,
 				A2E211A8151632E30064C4DD /* baseExpression.h */,
+				A2E211B5151648B40064C4DD /* divideExpression.cpp */,
 				A2E211A9151632E30064C4DD /* divideExpression.h */,
 				A2E211AA151632E30064C4DD /* expressions.h */,
+				A2E211B6151648B50064C4DD /* lnExpression.cpp */,
 				A2E211AB151632E30064C4DD /* lnExpression.h */,
+				A2E211B7151648B50064C4DD /* logExpression.cpp */,
 				A2E211AC151632E30064C4DD /* logExpression.h */,
+				A2E211B8151648B50064C4DD /* modExpression.cpp */,
 				A2E211AD151632E30064C4DD /* modExpression.h */,
+				A2E211B9151648B60064C4DD /* multiplyExpression.cpp */,
 				A2E211AE151632E30064C4DD /* multiplyExpression.h */,
+				A2E211BA151648B60064C4DD /* numberExpression.cpp */,
 				A2E211AF151632E30064C4DD /* numberExpression.h */,
+				A2E211BB151648B60064C4DD /* powExpression.cpp */,
 				A2E211B0151632E30064C4DD /* powExpression.h */,
+				A2E211BC151648B70064C4DD /* subtractExpression.cpp */,
 				A2E211B1151632E30064C4DD /* subtractExpression.h */,
+				A2E211BD151648B70064C4DD /* trigExpression.cpp */,
 				A2E211B2151632E30064C4DD /* trigExpression.h */,
+				A2E211BE151648B70064C4DD /* variableExpression.cpp */,
 				A2E211B3151632E30064C4DD /* variableExpression.h */,
 			);
 			name = expression;
@@ -195,6 +198,7 @@
 				A2E211C7151648B70064C4DD /* subtractExpression.cpp in Sources */,
 				A2E211C8151648B70064C4DD /* trigExpression.cpp in Sources */,
 				A2E211C9151648B70064C4DD /* variableExpression.cpp in Sources */,
+				A248813B1516B448004FC53A /* baseExpression.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,37 +29,20 @@ protected:
 public:
 
     ///Constructs a new expression
-    BaseExpression()
-    {
-        mLeft = mRight = 0;
-    }
+    BaseExpression();
 
     ///Constructs an expression from two sides
-    BaseExpression(BaseExpression* pLeft, BaseExpression* pRight)
-    {
-        mLeft = pLeft;
-        mRight = pRight;
-    }
+    BaseExpression(BaseExpression* pLeft, BaseExpression* pRight);
 
     ///Destroys an expression
-    ~BaseExpression()
-    {
-        if(mLeft)
-            delete mLeft;
-        
-        if(mRight)
-            delete mRight;
-    }
+    ~BaseExpression();
 
     
     ///Evaluates the expression at the point pX, pY
     inline virtual float evaluate(float pX, float pY) = 0;
 
     ///Prints the expression to the console
-    virtual void printExpression()
-    {
-        printf("%s",toString().c_str());
-    }
+    virtual void printExpression();
     
     ///Returns a string representation of the expression
     virtual std::string toString() = 0;
@@ -69,6 +52,10 @@ public:
     
     ///Cleans and minimizes the expression
     virtual BaseExpression* clean() = 0;
+
+    
+    ///Creates an addition expression
+    BaseExpression* operator+(BaseExpression *pRight) const;    
 };
 
 #endif

@@ -33,11 +33,15 @@ float DivideExpression::evaluate(float pX, float pY)
 ///Returns a string represenation of the expression
 std::string DivideExpression::toString()
 {
-    printf("(");
-    mLeft->printExpression();
-    printf(" / ");
-    mRight->printExpression();
-    printf(")");
+    std::string lString;
+    
+    lString += "(";
+    lString += mLeft->toString();
+    lString += " / ";
+    lString += mRight->toString();
+    lString += ")";
+    
+    return lString;
 }
 
 ///Returns a new expression containing the derivative of this expression

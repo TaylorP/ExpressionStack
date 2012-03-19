@@ -66,6 +66,45 @@ float TrigExpression::evaluate(float pX, float pY)
             lVal = 1.0/tan(lLeft);
             break;      
             
+            
+        case eACsc:
+            lVal = 1.0/asin(lLeft);
+            break;
+            
+        case eASec: 
+            lVal = 1.0/acos(lLeft);
+            break;
+            
+        case eACot:
+            lVal = 1.0/atan(lLeft);
+            break;      
+            
+            
+        case eSinH:
+            lVal = sinh(lLeft);
+            break;
+            
+        case eCosH: 
+            lVal = cosh(lLeft);
+            break;
+            
+        case eTanH:
+            lVal = tanh(lLeft);
+            break;   
+            
+            
+        case eASinH:
+            lVal = asinh(lLeft);
+            break;
+            
+        case eACosH: 
+            lVal = acosh(lLeft);
+            break;
+            
+        case eATanH:
+            lVal = atanh(lLeft);
+            break;        
+            
         default:
             break;
             
@@ -94,6 +133,19 @@ std::string TrigExpression::toString()
             break;
             
             
+        case eCsc:
+            lStrRep = "csc(";
+            break;
+            
+        case eSec: 
+            lStrRep = "sec(";
+            break;
+            
+        case eCot:
+            lStrRep = "cot(";
+            break;   
+            
+            
         case eASin:
             lStrRep = "asin(";
             break;
@@ -106,16 +158,43 @@ std::string TrigExpression::toString()
             lStrRep = "atan(";
             break;
             
-        case eCsc:
-            lStrRep = "csc(";
+            
+        case eACsc:
+            lStrRep = "acsc(";
             break;
             
-        case eSec: 
-            lStrRep = "sec(";
+        case eASec: 
+            lStrRep = "asec(";
             break;
             
-        case eCot:
-            lStrRep = "cot(";
+        case eACot:
+            lStrRep = "acot(";
+            break;
+            
+            
+        case eSinH:
+            lStrRep = "sinh(";
+            break;
+            
+        case eCosH: 
+            lStrRep = "cosh(";
+            break;
+            
+        case eTanH:
+            lStrRep = "tanh(";
+            break;   
+            
+            
+        case eASinH:
+            lStrRep = "asinh(";
+            break;
+            
+        case eACosH: 
+            lStrRep = "acosh(";
+            break;
+            
+        case eATanH:
+            lStrRep = "atanh(";
             break;       
             
         default:
@@ -147,8 +226,25 @@ BaseExpression* TrigExpression::derivative(VariableExpression *pVariable)
            lTrigPart = new PowerExpression(new TrigExpression(mLeft, eSec), new NumberExpression(2.0));
             break;
             
+            
+            
+        case eASin:
+            lTrigPart= new DivideExpression(new NumberExpression(1.0), 
+                                        new PowerExpression(new SubtractExpression(new NumberExpression(1.0),new PowerExpression(XVAR,new NumberExpression(2.0))),new NumberExpression(0.5f)));
+           
+            break;
+            
+        case eACos: 
+            lTrigPart= new DivideExpression(new NumberExpression(-1.0), 
+                                            new PowerExpression(new SubtractExpression(new NumberExpression(1.0),new PowerExpression(XVAR,new NumberExpression(2.0))),new NumberExpression(0.5f)));
+            break;
+            
+        case eATan:
+            lTrigPart = new DivideExpression(new NumberExpression(.0), 
+                                            new AddExpression(new NumberExpression(1.0),new PowerExpression(XVAR,new NumberExpression(2.0))));
+            break;
+            
         default:
-            return 0;
             break;
             
     }

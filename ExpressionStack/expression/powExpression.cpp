@@ -32,7 +32,7 @@ std::string PowerExpression::toString()
     
     lString += "(";
     lString += mLeft->toString();
-    lString += " ^ ";
+    lString += "^";
     lString += mRight->toString();
     lString += ")";
     
