@@ -12,8 +12,14 @@
 #include <iostream>
 #include <sstream>
 
-#include "types.h"
+
+#ifdef __APPLE__
 #include "vector2F.h"
+#include "types.h"
+#else
+#include "..\types.h"
+#include "..\linalg\vector2F.h"
+#endif
 
 class VariableExpression;
 

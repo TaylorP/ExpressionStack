@@ -4,6 +4,7 @@
 //Expression Stack
 
 
+#include <math.h>
 #include "expressions.h"
 
     
@@ -55,28 +56,28 @@ F32 TrigExpression::evaluate(F32 pX, F32 pY)
             
             
         case eCsc:
-            lVal = 1.0/sin(lLeft);
+            lVal = 1.0f/sin(lLeft);
             break;
             
         case eSec: 
-            lVal = 1.0/cos(lLeft);
+            lVal = 1.0f/cos(lLeft);
             break;
             
         case eCot:
-            lVal = 1.0/tan(lLeft);
+            lVal = 1.0f/tan(lLeft);
             break;      
             
             
         case eACsc:
-            lVal = 1.0/asin(lLeft);
+            lVal = 1.0f/asin(lLeft);
             break;
             
         case eASec: 
-            lVal = 1.0/acos(lLeft);
+            lVal = 1.0f/acos(lLeft);
             break;
             
         case eACot:
-            lVal = 1.0/atan(lLeft);
+            lVal = 1.0f/atan(lLeft);
             break;      
             
             

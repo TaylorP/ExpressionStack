@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\expression">
+      <UniqueIdentifier>{e67a87ae-3a25-4417-87b9-cd19c6aebf93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\linalg">
+      <UniqueIdentifier>{5bbaee63-acf2-440e-b429-b05eeea3edfb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="expression\addExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\baseExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\divideExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\lnExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\logExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\modExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\multiplyExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\numberExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\powExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\subtractExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\trigExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="expression\variableExpression.cpp">
+      <Filter>Source Files\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="expression\addExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\baseExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\divideExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\expressions.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\lnExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\logExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\modExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\multiplyExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\numberExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\powExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\subtractExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\trigExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="expression\variableExpression.h">
+      <Filter>Source Files\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="linalg\point2F.h">
+      <Filter>Source Files\linalg</Filter>
+    </ClInclude>
+    <ClInclude Include="linalg\vector2F.h">
+      <Filter>Source Files\linalg</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

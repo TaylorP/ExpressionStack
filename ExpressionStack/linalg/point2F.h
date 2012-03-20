@@ -6,7 +6,11 @@
 #ifndef POINT_2F_H
 #define POINT_2F_H
 
+#ifdef __APPLE__
 #include "types.h"
+#else
+#include "..\types.h"
+#endif
 
 ///Basic structure for holding an ordered pair of data.
 typedef struct

@@ -45,9 +45,10 @@ F32 BaseExpression::evaluate(Point2F& pPoint)
 ///Evaluates the gradient at the point pX, pY
 Vector2F BaseExpression::gradient(F32 pX, F32 pY)
 {
+	BaseExpression* t = derivative(XVAR);
     return Vector2F(
-                    this->derivative(XVAR)->evaluate(pX, pY), 
-                    this->derivative(YVAR)->evaluate(pX, pY)
+                    derivative(XVAR)->evaluate(pX, pY), 
+                    derivative(YVAR)->evaluate(pX, pY)
                     );
 }
 
@@ -55,6 +56,6 @@ Vector2F BaseExpression::gradient(F32 pX, F32 pY)
 Vector2F BaseExpression::gradient(Point2F& pPoint)
 {
     return Vector2F(
-                    this->derivative(XVAR)->evaluate(pPoint), 
-                    this->derivative(YVAR)->evaluate(pPoint));
+                    derivative(XVAR)->evaluate(pPoint), 
+                    derivative(YVAR)->evaluate(pPoint));
 }
